@@ -1,0 +1,3 @@
+Cara termudah OOP untuk di laravel adalah:
+1. Dari setiap tabel ERD, buatlah modelnya
+2. Untuk setiap usecase atau method di class diagram akan di buat kode nya pada controller
