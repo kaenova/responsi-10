@@ -18,7 +18,7 @@ class AkunController extends Controller
         // Gunakan request untuk mendapatkan data yg diinginkan
 
         // Disini aku hanya hardcode input datanya
-        $username = "kaenova laravel";
+        $username = "kaenova laravel 2";
         $password = "keren banget";
 
         $akun = new Akun();
@@ -34,16 +34,4 @@ class AkunController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function login(Request $request)
-    {
-        // Gunakan request untuk mendapatkan data yg diinginkan
-
-        // Disini aku hanya hardcode input datanya
-        $username = "kaenova laravel";
-        $password = "keren banget";
-
-        $akun = Akun::where([['username', "=", $username], ['password', "=", $password]])->first();
-
-        ddd($akun);
-    }
 }

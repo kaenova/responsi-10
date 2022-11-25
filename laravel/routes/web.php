@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/akun/login', [AkunController::class, 'login']);
 Route::get('/akun/register', [AkunController::class, 'register']);
 
+Route::get('/admin/login', [AdminController::class, 'login']);
 Route::get('/admin/buat_toko', [AdminController::class, 'buat_toko']);
 Route::get('/admin/buat_barang', [AdminController::class, 'buat_barang']);
 Route::get('/admin/sematkan_barang_toko', [AdminController::class, 'sematkan_barang_toko']);

@@ -29,9 +29,7 @@ public class Akun {
         PreparedStatement st = con.prepareStatement("INSERT INTO akun (username, password) VALUES (?, ?);");
         st.setString(1, username);
         st.setString(2, password);
-        if (!st.execute()) {
-            throw new Exception("Fail to register");
-        }
+        st.executeUpdate();
     }
 
     public int getId() {

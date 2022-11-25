@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Akun;
 use App\Models\Barang;
 use App\Models\BarangToko;
 use App\Models\Toko;
@@ -9,6 +10,20 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+
+    public function login(Request $request)
+    {
+        // Gunakan request untuk mendapatkan data yg diinginkan
+
+        // Disini aku hanya hardcode input datanya
+        $username = "kaenova laravel 3";
+        $password = "keren banget";
+
+        $akun = Akun::where([['username', "=", $username], ['password', "=", $password]])->first();
+
+        ddd($akun);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -20,7 +35,7 @@ class AdminController extends Controller
         // Gunakan request untuk mendapatkan data yg diinginkan
         // Disini aku hanya hardcode
 
-        $nama_toko = "Toko laravel";
+        $nama_toko = "Toko laravel 2";
         $id_admin = 2;
 
         $toko = new Toko();
@@ -64,8 +79,8 @@ class AdminController extends Controller
         // Gunakan request untuk mendapatkan data yg diinginkan
         // Disini aku hanya hardcode
 
-        $id_toko = 8;
-        $id_barang = 4;
+        $id_toko = 4;
+        $id_barang = 3;
 
         $semat = new BarangToko();
         $semat->id_barang = $id_barang;

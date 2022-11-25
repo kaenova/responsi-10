@@ -23,18 +23,19 @@ public class Responsi {
         db.getConnection();
         System.out.println("Successfully get a connection");
 
-//        // Register Usecase
-//        Akun.Register(db, "kaenova", "halo responsi");
-//        System.out.println("Successfully register");
+        // Register Usecase
+        Akun.Register(db, "kaenova java", "halo responsi");
+        System.out.println("Successfully register");
+
         // Login Usecase
-        Admin admn = Admin.login(db, "kaenova", "halo responsi");
+        Admin admn = Admin.login(db, "kaenova java", "halo responsi");
 
         // Buat Toko Usecase
-        Toko toko = admn.buatToko(db, "Keren Tokonya 3");
+        Toko toko = admn.buatToko(db, "IF-01 SEMATKAN");
         System.out.println(toko);
 
         // Buat Barang Usecase
-        Barang brg = admn.buatBarang(db, "Keren Barangnya 3");
+        Barang brg = admn.buatBarang(db, "IF-01 SEMATKAN");
         System.out.println(brg);
 
         admn.sematkanBarangToko(db, brg, toko);
